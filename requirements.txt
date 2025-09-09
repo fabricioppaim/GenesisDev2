@@ -1,0 +1,8 @@
+asgiref==3.8.1
+black==24.4.2
+Django==5.0.6
+mssql-django
+isort==5.13.2
+python-dotenv==1.0.1
+pyodbc==5.1.0
+sqlparse==0.5.0
