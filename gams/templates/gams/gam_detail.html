@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ object.user_id_gam_admin }}</h2>
+<p>Connection: {{ object.user_id_gam_connection }}</p>
+<a href="{% url 'gams:gam_update' object.pk %}">Editar</a>
+{% endblock %}

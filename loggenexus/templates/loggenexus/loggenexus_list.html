@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>LogGenexus</h2>
+<ul>
+  {% for log in object_list %}
+    <li><a href="{{ log.get_absolute_url }}">{{ log.conversion_pattern|truncatechars:30 }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'loggenexus:loggenexus_create' %}">Novo LogGenexus</a>
+{% endblock %}

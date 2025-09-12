@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ object.gx_server_url }}</h2>
+<p>Versão: {{ object.gx_server_version }}</p>
+<p>Diretório: {{ object.gx_server_working_directory }}</p>
+<p>Diretório KB: {{ object.gx_server_working_directory_kb }}</p>
+<a href="{% url 'genexus:genexus_update' object.pk %}">Editar</a>
+{% endblock %}

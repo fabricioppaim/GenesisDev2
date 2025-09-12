@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>GAMs</h2>
+<ul>
+  {% for gam in object_list %}
+    <li><a href="{{ gam.get_absolute_url }}">{{ gam.user_id_gam_admin }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'gams:gam_create' %}">Novo GAM</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Credenciais</h2>
+<ul>
+  {% for cred in object_list %}
+    <li><a href="{{ cred.get_absolute_url }}">{{ cred.name }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'credenciais:credencial_create' %}">Nova Credencial</a>
+{% endblock %}

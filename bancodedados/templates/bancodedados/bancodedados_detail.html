@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ object.name }}</h2>
+<p>Service Name: {{ object.service_name }}</p>
+<p>Engine: {{ object.engine }}</p>
+<a href="{% url 'bancodedados:bancodedados_update' object.pk %}">Editar</a>
+{% endblock %}

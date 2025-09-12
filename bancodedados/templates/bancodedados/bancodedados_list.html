@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Bancos de Dados</h2>
+<ul>
+  {% for bd in object_list %}
+    <li><a href="{{ bd.get_absolute_url }}">{{ bd.name }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'bancodedados:bancodedados_create' %}">Novo Banco de Dados</a>
+{% endblock %}

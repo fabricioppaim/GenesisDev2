@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>LogGenexus</h2>
+<p>{{ object.conversion_pattern }}</p>
+<a href="{% url 'loggenexus:loggenexus_update' object.pk %}">Editar</a>
+{% endblock %}

@@ -1,3 +1,4 @@
+
 from django.db import models
 
-# Create your models here.
+# Models removidos para seguir com estrutura por apps separados.

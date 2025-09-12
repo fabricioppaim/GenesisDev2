@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ object.name }}</h2>
+<p>Versão: {{ object.version }}</p>
+<p>Server KB Alias: {{ object.server_kb_alias }}</p>
+<p>KB Version: {{ object.kb_version }}</p>
+<p>Target Path: {{ object.target_path }}</p>
+<p>Base GAM: {{ object.base_gam }}</p>
+<p>HTTPS: {{ object.https }}</p>
+<a href="{% url 'projetos:projeto_update' object.pk %}">Editar</a>
+{% endblock %}

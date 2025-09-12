@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Genexus</h2>
+<ul>
+  {% for gx in object_list %}
+    <li><a href="{{ gx.get_absolute_url }}">{{ gx.gx_server_url }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'genexus:genexus_create' %}">Novo Genexus</a>
+{% endblock %}

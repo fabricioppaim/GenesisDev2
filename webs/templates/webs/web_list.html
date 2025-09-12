@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Webs</h2>
+<ul>
+  {% for web in object_list %}
+    <li><a href="{{ web.get_absolute_url }}">{{ web.name }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'webs:web_create' %}">Nova Web</a>
+{% endblock %}

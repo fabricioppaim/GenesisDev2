@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Projetos</h2>
+<ul>
+  {% for projeto in object_list %}
+    <li><a href="{{ projeto.get_absolute_url }}">{{ projeto.name }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'projetos:projeto_create' %}">Novo Projeto</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Empresas</h2>
+<ul>
+  {% for empresa in object_list %}
+    <li><a href="{{ empresa.get_absolute_url }}">{{ empresa.name }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'empresas:empresa_create' %}">Nova Empresa</a>
+{% endblock %}

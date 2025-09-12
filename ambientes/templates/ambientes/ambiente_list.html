@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Ambientes</h2>
+<ul>
+  {% for ambiente in object_list %}
+    <li><a href="{{ ambiente.get_absolute_url }}">{{ ambiente.name }}</a></li>
+  {% endfor %}
+</ul>
+<a href="{% url 'ambientes:ambiente_create' %}">Novo Ambiente</a>
+{% endblock %}
